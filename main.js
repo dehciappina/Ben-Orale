@@ -22,10 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
             logotypeOnly.style.transform = 'translateY(0vh)'
             logotypeOnly.style.width = '62%'
 
-            setTimeout(() => {
-                logoOnly.style.zIndex = 0;
-            }, 1500);
-
         }, 700);
     }, 200);
 });
@@ -43,10 +39,20 @@ function showHiddenNav() {
 
 hamburger.addEventListener('click', showHiddenNav)
 
+const fixedIMG = document.querySelectorAll('.fixed_img_div img')
 
-document.querySelector('body').onscroll = function() {
-    document.querySelector('.fixed_img_div img').style.transform = "translateY(" + window.scrollY + "px)"
+for(i = 0; i < fixedIMG.length; ++i) {
+    console.log(fixedIMG[i].getBoundingClientRect().top)
+    fixedIMG[i].style.bottom = (fixedIMG[i].getBoundingClientRect().top - 300) + "px";
 }
+
+document.body.onscroll = function() {
+    for(i = 0; i < fixedIMG.length; ++i) {
+      fixedIMG[i].style.transform = "translateY(" + window.scrollY + "px)"
+    }
+}
+
+
 
 
 

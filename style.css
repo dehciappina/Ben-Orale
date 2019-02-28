@@ -87,7 +87,6 @@ header {
     width: 100%;
     position: absolute;
     height: 15%;
-    border-radius: 3vh;
     transition:transform 0.3s ease;
     -webkit-transition:transform 0.3s ease;
     -moz-transition:transform 0.3s ease;
@@ -200,7 +199,7 @@ footer {
 }
 
 .contact {
-    margin-bottom: 2vh;
+    margin-bottom: 4vw;
     display: flex;
 }
 
@@ -214,6 +213,7 @@ footer {
     font-size: 6vw;
     z-index: 1;
     position: relative;
+    box-shadow: 0 0.5vh 1vh #8AC;
 }
 
 
@@ -238,6 +238,7 @@ footer {
     position: relative;
     top: 0.5vw;
     z-index: 1;
+    filter: drop-shadow(0 0.7vh 0.6vh #8AC);
 }
 
 .contact a img {
@@ -247,9 +248,9 @@ footer {
 .boas_vindas {
     display: block;
     text-align: center;
-    margin: calc(27vh - 23vw) auto 45vw auto;
+    margin: calc(27vh - 21vw) auto 23vh auto;
     width: 40%;
-    font-size: 7vw;
+    font-size: 6vw;
     font-weight: 100;
 }
 
@@ -257,7 +258,7 @@ h1 {
     font-weight: 300;
     text-align: center;
     font-size: 7vw;
-    margin-bottom: 20vh;
+    margin-bottom: calc(50vh - 230px);
 }
 
 h2 {
@@ -267,10 +268,10 @@ h2 {
     position: absolute;
     text-align: center;
     width: 100%;
-    bottom: 10%;
+    bottom: 14.6%;
 }
 
-strong {
+strong, b {
     font-weight: 400;
 }
 
@@ -280,12 +281,61 @@ strong {
     background:#9dc1e1;
     overflow: hidden;
     position: relative;
-
-    margin-bottom: 100vh;
+    margin-bottom: 3vh;
 }
 
 .fixed_img_div img {
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
     width: 100%;
+    will-change: transform;
+    /* transition: transform 2s ease-out; */
+}
+
+.tratamentos {
+}
+
+.tratamentos article {
+    width: 90%;
+    display: block;
+    margin: 0 auto 4vh auto;
+    background: #FAFAFA;
+    padding: 2vh 4vh 3vh 2vh;
+    box-sizing: border-box;
+}
+
+.tratamentos article h3 {
+    font-size: 7vw;
+    font-weight: 400;
+    position: relative;
+}
+
+.tratamentos article h3::after {
+    content: '';
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 0.8vw;
+    left: 0;
+    bottom: -20%;
+}
+
+.tratamentos article p {
+    margin: 2vh 0;
+    font-size: 5vw;
+    font-weight: 300;
+}
+
+.tratamentos article a {
+    text-align: right;
+    font-size: 4vw;
+    background: #FFF;
+    padding: 0.6vh 1vh;
+    float: right;
+    border: 0.6vh solid #FAFAFA;
+}
+
+a {
+    color:inherit;
+    text-decoration: none;
 }
