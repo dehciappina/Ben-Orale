@@ -195,8 +195,8 @@ footer {
 .address p {
     text-align: center;
     display: block;
-    padding: 2vh 0;
-    font-size: 4.5vw;
+    padding: 1vh 0;
+    font-size: 4vw;
     max-height: 8vh;
 }
 
@@ -207,10 +207,10 @@ footer {
 
 .contact p {
     background: white;
-    height: 12vw;
+    height: 10vw;
     display: inline-block;
     border-radius: 0 20vh 20vh 0;
-    line-height: 12vw;
+    line-height: 10vw;
     padding: 0 4vw 0 7vw;
     font-size: 6vw;
     z-index: 1;
@@ -224,7 +224,7 @@ footer {
     color: white;
     font-size: 20vw;
     z-index: -1;
-    letter-spacing: 3.35vw;
+    letter-spacing: 3.4vw;
     transform: translateY(-6vw);
     -webkit-transform: translateY(-6vw);
     -moz-transform: translateY(-6vw);
@@ -233,11 +233,11 @@ footer {
 }
 
 .contact a {
-    width: 10vw;
-    height: 10vw;
-    margin: 0 0 0 7vw;
+    width: 9vw;
+    height: 9vw;
+    margin: 0 0 0 8vw;
     position: relative;
-    top: 1vw;
+    top: 0.5vw;
     z-index: 1;
 }
 
@@ -248,7 +248,7 @@ footer {
 .boas_vindas {
     display: block;
     text-align: center;
-    margin: 14vh auto 22vh auto;
+    margin: calc(27vh - 25vw) auto 45vw auto;
     width: 40%;
     font-size: 7vw;
     font-weight: 100;
@@ -258,6 +258,17 @@ h1 {
     font-weight: 300;
     text-align: center;
     font-size: 7vw;
+    margin-bottom: 20vh;
+}
+
+h2 {
+    color: white;
+    font-weight: 300;
+    font-size: 7vh;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10%;
 }
 
 strong {
@@ -266,17 +277,17 @@ strong {
 
 .fixed_img_div {
     width: 100%;
-    height:38vh;
-    background:#222;
+    height: 24.6vh;
+    background:#9dc1e1;
     overflow: hidden;
     position: relative;
-    margin: 10vh 0 150vh 0;
+
+    margin-bottom: 100vh;
 }
 
 .fixed_img_div img {
     position: absolute;
-    top: -80vh;
+    top: -100vh;
     width: 100%;
-    height: 100vh;
-    object-fit: cover;
+    opacity: 0.3;
 }

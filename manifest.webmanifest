@@ -1,0 +1,22 @@
+{
+  "short_name": "Ben Orale",
+  "name": "Ben Orale | Odontologia Especializada",
+  "icons": [
+    {
+      "src": "images/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#9dc1e1",
+  "orientation": "portrait",
+  "display": "standalone",
+  "scope": "./",
+  "theme_color": "#ffffff"
+}
