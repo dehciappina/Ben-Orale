@@ -45,5 +45,5 @@ hamburger.addEventListener('click', showHiddenNav)
 
 
 document.querySelector('body').onscroll = function() {
-    document.querySelector('.fixed_img_div img').style.transform = "translateY(" + window.pageYOffset + "px)"
+    document.querySelector('.fixed_img_div img').style.transform = "translateY(" + window.scrollY + "px)"
 }

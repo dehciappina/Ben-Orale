@@ -266,7 +266,7 @@ strong {
 
 .fixed_img_div {
     width: 100%;
-    height:30vh;
+    height:38vh;
     background:#222;
     overflow: hidden;
     position: relative;
@@ -278,5 +278,5 @@ strong {
     top: -80vh;
     width: 100%;
     height: 100vh;
-    object-fit: contain;
+    object-fit: cover;
 }
