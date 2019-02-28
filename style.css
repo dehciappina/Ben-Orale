@@ -44,7 +44,7 @@ header {
 
 .logo_only {
     top: 38vh;
-    width: 42%;
+    width: 50%;
     margin: 0 auto;
     transform: translateY(0) scale(1);
     opacity: 1;
@@ -65,11 +65,11 @@ header {
     height: 62%;
     margin: 0 0 0 10%;
     top: 19%;
-    transform: translateY(55vh);
-    -webkit-transform: translateY(55vh);
-    -moz-transform: translateY(55vh);
-    -ms-transform: translateY(55vh);
-    -o-transform: translateY(55vh);
+    transform: translateY(60vh);
+    -webkit-transform: translateY(60vh);
+    -moz-transform: translateY(60vh);
+    -ms-transform: translateY(60vh);
+    -o-transform: translateY(60vh);
 }
 
 .hamburger {
@@ -247,7 +247,7 @@ footer {
 .boas_vindas {
     display: block;
     text-align: center;
-    margin: calc(27vh - 25vw) auto 45vw auto;
+    margin: calc(27vh - 23vw) auto 45vw auto;
     width: 40%;
     font-size: 7vw;
     font-weight: 100;
