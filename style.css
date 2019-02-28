@@ -35,6 +35,7 @@ header {
 }
 
 .logo_only, .logotype_only {
+    position: absolute;
     display: block;
     left: 0;
     right: 0;
@@ -42,7 +43,6 @@ header {
 }
 
 .logo_only {
-    position: fixed;
     top: 38vh;
     width: 42%;
     margin: 0 auto;
@@ -60,7 +60,6 @@ header {
 }
 
 .logotype_only {
-    position: absolute;
     width: 80%;
     max-width: 100vh;
     height: 62%;
@@ -287,7 +286,6 @@ strong {
 
 .fixed_img_div img {
     position: absolute;
-    top: -100vh;
+    bottom: 0;
     width: 100%;
-    opacity: 0.3;
 }
