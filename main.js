@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
             whiteLoadingBG.style.opacity = 0;
             whiteLoadingBG.style.visibility = 'hidden';
 
-            logoOnly.style.transform = 'translateY(-25vw) scale(2.8)';
+            logoOnly.style.transform = 'translateY(-25vw) scale(2)';
             logoOnly.style.opacity = 0.2;
 
             logotypeOnly.style.transform = 'translateY(0vh)'
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 logoOnly.style.zIndex = 0;
             }, 1500);
 
-        }, 200);
+        }, 700);
     }, 200);
 });
 
@@ -37,7 +37,7 @@ function showHiddenNav() {
         document.querySelector('.hamburger div:first-child').classList.toggle('hamburger_first_div_hidden')
         document.querySelector('.hamburger div:nth-child(2)').classList.toggle('hamburger_second_div_hidden')
         document.querySelector('.hamburger div:nth-child(3)').classList.toggle('hamburger_third_div_hidden')
-    }, 200);
+    }, 100);
 
 }
 
