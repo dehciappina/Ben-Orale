@@ -292,7 +292,7 @@ strong, b {
 }
 
 .fixed_img_div img:first-child {
-    bottom: 20vh;
+    bottom: 5vh;
 }
 
 .fixed_img_div img {
