@@ -19,8 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             logoOnly.style.transform = 'translateY(-25vw) scale(2)';
             logoOnly.style.opacity = 0.2;
 
-            logotypeOnly.style.transform = 'translateY(0vh)'
-            logotypeOnly.style.width = '62%'
+            logotypeOnly.classList.add('logotype_only_smaller')
 
         }, 700);
     }, 200);
@@ -29,10 +28,16 @@ document.addEventListener("DOMContentLoaded", function() {
 function showHiddenNav() {
     headerNav.classList.toggle('nav_show');
 
+    hamburger.style.background = '#fafafa';
+
     setTimeout(() => {
         document.querySelector('.hamburger_container div div:first-child').classList.toggle('hamburger_first_div_hidden')
         document.querySelector('.hamburger_container div div:nth-child(2)').classList.toggle('hamburger_second_div_hidden')
         document.querySelector('.hamburger_container div div:nth-child(3)').classList.toggle('hamburger_third_div_hidden')
+
+        setTimeout(() => {
+          hamburger.style.background = '#ffffff';
+        }, 300);
     }, 100);
 
 }
