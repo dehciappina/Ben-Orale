@@ -303,7 +303,7 @@ h1 {
 h2 {
     color: white;
     font-weight: 300;
-    font-size: 7vh;
+    font-size: 15vw;
     position: absolute;
     text-align: center;
     width: 100%;
@@ -316,7 +316,7 @@ strong, b {
 
 .fixed_img_div {
     width: 100%;
-    height: 38vh;
+    height: 50vh;
     background:#9dc1e1;
     overflow: hidden;
     position: relative;
@@ -595,7 +595,7 @@ a {
 
     .main_section article {
         min-height: 38vh;
-        max-width: 28vw;
+        max-width: 44vw;
         display: inline-block;
         border-radius: 0;
         -webkit-border-radius: 0;
@@ -654,6 +654,11 @@ a {
     .main_section iframe {
         height:50vh;
     }
+
+    .hamburger_container > div {
+        height: 40%;
+        left: 20%;
+}
 }
 
 
@@ -751,6 +756,10 @@ a {
 
     .fixed_img_div img:first-child {
         bottom: 65vw;
+    }
+
+    .main_section article {
+        max-width: 28vw;
     }
     .main_section article:last-child {
         max-width: 64%;

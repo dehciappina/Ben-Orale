@@ -75,7 +75,7 @@ if (window.matchMedia("(max-width: 100vh)").matches) {
 
   document.querySelector('#tratamentos img').style.bottom = 90 + 'vw';
   
-  consultorioIMG.style.bottom = tratamentosSectionHeight / 3 + 'px';
+  consultorioIMG.style.bottom = tratamentosSectionHeight / 2 + 'px';
 
   localizacaoIMG.style.bottom = (consultorioSectionHeight + tratamentosSectionHeight) / 2 + 'px';
 
