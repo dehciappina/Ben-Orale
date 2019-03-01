@@ -194,7 +194,7 @@ footer {
 
 .address {
     background: white;
-    box-shadow: 0 -5vh 10vh #9dc1e1;
+    box-shadow: 0 0 10vh 6vh #9dc1e1;
 }
 
 .address p {
@@ -255,7 +255,7 @@ footer {
 .boas_vindas {
     display: block;
     text-align: center;
-    margin: calc(27vh - 21vw) auto 23vh auto;
+    margin: calc(27vh - 21vw) auto 25vw auto;
     width: 40%;
     font-size: 6vw;
     font-weight: 100;
@@ -265,7 +265,7 @@ h1 {
     font-weight: 300;
     text-align: center;
     font-size: 7vw;
-    margin-bottom: calc(50vh - 230px);
+    margin-bottom: calc(110vh - 600px);
 }
 
 h2 {
