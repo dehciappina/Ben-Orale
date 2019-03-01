@@ -291,9 +291,12 @@ strong, b {
     margin-bottom: 3vh;
 }
 
+.fixed_img_div img:first-child {
+    bottom: 20vh;
+}
+
 .fixed_img_div img {
     position: absolute;
-    /* bottom: 0; */
     width: 100%;
     will-change: transform;
     /* transition: transform 2s ease-out; */
@@ -314,6 +317,11 @@ strong, b {
     padding: 2vh 4vh 3vh 2vh;
     box-sizing: border-box;
     border-radius: 2vh;
+    box-shadow: 0 1vh 1vh #EEE;
+}
+
+.main_section article:last-child {
+    margin-bottom: 10vh;
 }
 
 .main_section article h3 {

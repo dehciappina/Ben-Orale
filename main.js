@@ -40,11 +40,15 @@ function showHiddenNav() {
 hamburger.addEventListener('click', showHiddenNav)
 
 const fixedIMG = document.querySelectorAll('.fixed_img_div img')
-const tratamentosIMG = document.querySelector('#tratamentos img')
+const tratamentosIMG = document.querySelector('#tratamentos div img')
+const consultorioSection = document.querySelector('#consultorio')
 const consultorioDiv = document.querySelector('#consultorio img')
 const consultorioIMG = document.querySelector('#consultorio img')
 const localizacaoDiv = document.querySelector('#localizacao')
 const localizacaoIMG = document.querySelector('#localizacao img')
+
+let tratamentosSectionHeight = document.querySelector('#tratamentos').scrollHeight
+let consultorioSectionHeight = document.querySelector('#consultorio').scrollHeight
 
 document.body.onscroll = function() {
     for(i = 0; i < fixedIMG.length; ++i) {
@@ -52,11 +56,9 @@ document.body.onscroll = function() {
     }
 }
 
-tratamentosIMG.style.bottom = 0 + 'px';
+consultorioIMG.style.bottom = 'calc(' + tratamentosSectionHeight + 'px + ' + 20 + 'vh)';
 
-consultorioIMG.style.bottom = consultorioIMG.scrollHeight * 3 + 'px';
-
-localizacaoIMG.style.bottom = localizacaoIMG.scrollHeight * 4 +'px';
+localizacaoIMG.style.bottom = 'calc(' + Math.floor(tratamentosSectionHeight + consultorioSectionHeight) + 'px + ' + 20 + 'vh)';
 
 
 
