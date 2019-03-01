@@ -52,13 +52,13 @@ let consultorioSectionHeight = document.querySelector('#consultorio').scrollHeig
 
 document.body.onscroll = function() {
     for(i = 0; i < fixedIMG.length; ++i) {
-      fixedIMG[i].style.transform = "translateY(" + window.scrollY + "px)"
+      fixedIMG[i].style.transform = "translateY( -" + window.pageYOffset / 4 + "px)"
     }
 }
 
-consultorioIMG.style.bottom = 'calc(' + tratamentosSectionHeight + 'px + ' + 20 + 'vh)';
+consultorioIMG.style.bottom = '-' + tratamentosSectionHeight / 4 + 'px';
 
-localizacaoIMG.style.bottom = 'calc(' + Math.floor(tratamentosSectionHeight + consultorioSectionHeight) + 'px + ' + 20 + 'vh)';
+localizacaoIMG.style.bottom = '-' + (consultorioSectionHeight + tratamentosSectionHeight) / 6 + 'px';
 
 
 
