@@ -323,9 +323,6 @@ strong, b {
     margin-bottom: 3vh;
 }
 
-.fixed_img_div img:first-child {
-    bottom: 200vw;
-}
 
 .fixed_img_div img {
     position: relative;
@@ -654,6 +651,9 @@ a {
     #tratamentos {
         padding: 0 3vw;
     }
+    .main_section iframe {
+        height:50vh;
+    }
 }
 
 
@@ -754,5 +754,16 @@ a {
     }
     .main_section article:last-child {
         max-width: 64%;
+    }
+
+    .main_section iframe {
+        width: 62%;
+        margin: 0vh 0 0 0;
+        display: inline-block;
+    }
+
+    .iframe_info {
+        width: 38%;
+        margin: 0;
     }
 }

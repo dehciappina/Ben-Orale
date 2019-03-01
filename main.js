@@ -73,8 +73,9 @@ if (window.matchMedia("(max-width: 100vh)").matches) {
       }
   }
 
+  document.querySelector('#tratamentos img').style.bottom = 90 + 'vw';
   
-  consultorioIMG.style.bottom = tratamentosSectionHeight / 2 + 'px';
+  consultorioIMG.style.bottom = tratamentosSectionHeight / 3 + 'px';
 
   localizacaoIMG.style.bottom = (consultorioSectionHeight + tratamentosSectionHeight) / 2 + 'px';
 
@@ -82,13 +83,15 @@ if (window.matchMedia("(max-width: 100vh)").matches) {
 } else {
   document.body.onscroll = function() {
     for(i = 0; i < fixedIMG.length; ++i) {
-      fixedIMG[i].style.transform = "translateY(" + window.pageYOffset / 2 + "px)"
+      fixedIMG[i].style.transform = "translateY(" + window.pageYOffset / 1.3 + "px)"
     }
   }
   
   consultorioIMG.style.bottom = tratamentosSectionHeight * 2 + 'px';
 
   localizacaoIMG.style.bottom = (consultorioSectionHeight + tratamentosSectionHeight) * 2 + 'px';
+
+  document.querySelector('#tratamentos img').style.bottom = 75 + 'vw';
 }
 
 
