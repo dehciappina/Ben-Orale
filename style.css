@@ -224,6 +224,9 @@ footer {
     font-size: 4vw;
     max-height: 8vh;
 }
+.address p span {
+    display: block;
+}
 
 .contact {
     margin-bottom: 4vw;
@@ -240,7 +243,6 @@ footer {
     font-size: 6vw;
     z-index: 1;
     position: relative;
-    box-shadow: 0 0.5vh 1vh #8AC;
 }
 
 
@@ -258,6 +260,10 @@ footer {
     -o-transform: translateY(-6vw);
 }
 
+.contact a, .contact p, .address {
+    filter: drop-shadow(0 0.7vh 0.6vh #8AC);
+}
+
 .contact a {
     width: 9vw;
     height: 9vw;
@@ -265,7 +271,11 @@ footer {
     position: relative;
     top: 0.5vw;
     z-index: 1;
-    filter: drop-shadow(0 0.7vh 0.6vh #8AC);
+    transition: transform 0.15s ease-out;
+    -webkit-transition: transform 0.15s ease-out;
+    -moz-transition: transform 0.15s ease-out;
+    -ms-transition: transform 0.15s ease-out;
+    -o-transition: transform 0.15s ease-out;
 }
 
 .contact a img {
@@ -285,7 +295,8 @@ footer {
 h1 {
     font-weight: 300;
     text-align: center;
-    font-size: 7vw;
+    font-size: 6vw;
+    padding: 0 10%;
     margin-bottom: calc(110vh - 600px);
 }
 
@@ -305,7 +316,7 @@ strong, b {
 
 .fixed_img_div {
     width: 100%;
-    height: 24.6vh;
+    height: 38vh;
     background:#9dc1e1;
     overflow: hidden;
     position: relative;
@@ -313,7 +324,7 @@ strong, b {
 }
 
 .fixed_img_div img:first-child {
-    bottom: 40vw;
+    bottom: 200vw;
 }
 
 .fixed_img_div img {
@@ -454,38 +465,219 @@ a {
 
 
 
-
+/* 1/2 DESKTOP */
 
 @media screen and (min-width: 100vh) {
+
+    h1 {
+        font-size: calc(1vw + 5vh);
+        padding: 24vh 20% 0 20%;
+        max-width: 80vh;
+        display: block;
+        text-shadow: 0 0.5vh 0.5vh white;
+        text-align: left;
+        max-width: 72vh;
+        padding: 24vh 0 0 10%;
+    }
 
     .desktop_header_logo {
         display: block;
         position: absolute;
-        height: 80%;
-        top: 10%;
+        height: 70%;
+        top: 15%;    
         left: 4vh;
+    }
+
+    .logo_only, .boas_vindas {
+        display:none;
     }
 
     .logotype_only_smaller {
         width: 50vh;
         margin: 0 0 0 21vh;
+        transition: none !important;
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+}
+
+    header {
+        height: 12vh;
     }
 
     header nav {
         width: 25%;
+        top: 12vh;
     }
+
+    header nav div, .hamburger_container {
+        cursor: pointer;
+    }
+
+    header nav div:nth-child(even) {
+        background: #fcfcfc;
+    }
+
+    header nav div {
+        transition:transform 0.7s ease-in-out, background 0.3s ease-in-out;
+        -webkit-transition:transform 0.7s ease-in-out, background 0.3s ease-in-out;
+        -moz-transition:transform 0.7s ease-in-out, background 0.3s ease-in-out;
+        -ms-transition:transform 0.7s ease-in-out, background 0.3s ease-in-out;
+        -o-transition:transform 0.7s ease-in-out, background 0.3s ease-in-out;
+}
+
+    header nav div:hover {
+        background:#FAFAFA;
+        transition:transform 0.7s ease-in-out, background 0.1s ease-in-out;
+        -webkit-transition:transform 0.7s ease-in-out, background 0.1s ease-in-out;
+        -moz-transition:transform 0.7s ease-in-out, background 0.1s ease-in-out;
+        -ms-transition:transform 0.7s ease-in-out, background 0.1s ease-in-out;
+        -o-transition:transform 0.7s ease-in-out, background 0.1s ease-in-out;
+}
 
     header nav div span {
         font-size: 3vh;
     }
 
+    .contact {
+        margin-bottom: 3vh;
+    }
+    .contact p {
+        height: 6vh;
+        line-height: 6vh;
+        font-size: 4vh;
+        padding: 0 5vh 0 11vh;
+    }
+    .contact a {
+        width: 6vh;
+        height: 6vh;
+        margin: 0 0 0 6vh;
+        top: 0;
+    }
+    .contact a:hover {
+        transform:scale(1.15);
+        -webkit-transform:scale(1.15);
+        -moz-transform:scale(1.15);
+        -ms-transform:scale(1.15);
+        -o-transform:scale(1.15);
+}
 
+    .contact p::before {
+        content: '........................................................';
+        position: absolute;
+        color: white;
+        font-size: 14vh;
+        letter-spacing: 0.35vh;
+        transform: translateY(-4vh);
+        -webkit-transform: translateY(-4vh);
+        -moz-transform: translateY(-4vh);
+        -ms-transform: translateY(-4vh);
+        -o-transform: translateY(-4vh);
+}
+    
+    .address p {
+        font-size: calc(1vw + 1vh);
+        max-height: 5vh;
+    }
+
+    .address p span {
+        display: inline;
+    }
+
+    
+    .intro {
+        background: url(assets/maps.JPG) fixed;
+        background-size: 100%;
+    }
+    
+    .main_section {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .main_section article {
+        min-height: 38vh;
+        max-width: 28vw;
+        display: inline-block;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        transform: skew(-5deg);
+        -webkit-transform: skew(-5deg);
+        -moz-transform: skew(-5deg);
+        -ms-transform: skew(-5deg);
+        -o-transform: skew(-5deg);
+    }
+
+    .main_section article * {
+        transform: skew(5deg);
+        -webkit-transform: skew(5deg);
+        -moz-transform: skew(5deg);
+        -ms-transform: skew(5deg);
+        -o-transform: skew(5deg);
+}
+
+
+    .main_section article h3 {
+        font-size: 5vh;
+        padding-left: 3vh;
+    }
+
+    .main_section article p {
+        font-size: 3.3vh;
+        padding-left: 2vh;
+    }
+
+    .main_section article a {
+        font-size: 2.5vh;
+        bottom: -2vh;
+    }
+
+    .main_section article h3::after {
+        height: 0.6vh;
+    }
+
+    .main_section > p {
+        font-size: 3.3vh;
+    }
+    
+    h2 {
+        font-weight: 100;
+        font-size: 13vh;
+        opacity: 0.9;
+        bottom: 9%;
+    }
+
+    #tratamentos {
+        padding: 0 3vw;
+    }
 }
 
 
 
-@media screen and (min-width: 180vh) {
 
+
+
+
+
+
+
+
+@media screen and (min-width: 170vh) {
+
+
+    h1 {
+        font-size: 3vw;
+    }
+
+    h2 {
+        width: 90%;
+        text-align: right;
+        font-size: 17vh;
+    }
 
     .hamburger_container {
         display:none;
@@ -505,20 +697,62 @@ a {
         -o-transform: none;
     }
 
+    header nav div {
+        width: 25%;
+        height: 100%;
+    }
+
+    header nav div:nth-child(1) {
+        transition-delay: 0s;
+    } header nav div:nth-child(2) {
+        transition-delay: 0s;
+    } header nav div:nth-child(3) {
+        transition-delay: 0s;
+    } header nav div:nth-child(4) {
+        transition-delay: 0s;
+    }
+
     header nav div span {
         font-size: 2.8vh;
     }
-
-    header nav div {
-        height: 100%;
-        cursor: pointer;
+    .address {
+        box-shadow: none;
+        position: absolute;
+        bottom: 35%;
+        right: 0;
+        z-index: 1;
+        border-radius: 10vh 0 0 10vh;
+    }
+    .address p {
+        text-align: left;
+        padding: 1vh 3vw;
+        font-size: 2.8vh;
     }
 
-    header nav div:nth-child(even) {
-        background: #fcfcfc;
+    footer {
+
     }
 
-    .logo_only {
-        display:none;
+    .white_bg {
+        transition: opacity, 1s ease, visibility 1s ease;
+        -webkit-transition: opacity, 1s ease, visibility 1s ease;
+        -moz-transition: opacity, 1s ease, visibility 1s ease;
+        -ms-transition: opacity, 1s ease, visibility 1s ease;
+        -o-transition: opacity, 1s ease, visibility 1s ease;
+    }
+
+    .fixed_img_div {
+        width: 65%;
+        display: inline-block;
+        margin-right: 1.8%;
+        margin-left: -3vw;
+        clip-path: polygon(0% 0%, 100% 0%, 97% 100%, 0% 100%);
+    }
+
+    .fixed_img_div img:first-child {
+        bottom: 65vw;
+    }
+    .main_section article:last-child {
+        max-width: 64%;
     }
 }

@@ -9,6 +9,8 @@ const headerNav = document.querySelector('header nav')
 
 document.addEventListener("DOMContentLoaded", function() {
 
+  
+  if (window.matchMedia("(max-width: 180vh)").matches) {
     setTimeout(() => {
         logotypeOnly.style.transition = 'transform 1.5s cubic-bezier(0.4, 0, 0.2, 1), width 1.5s cubic-bezier(0.4, 0, 0.2, 1)'
 
@@ -23,6 +25,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         }, 700);
     }, 200);
+  }
+  
+  whiteLoadingBG.style.opacity = 0;
+  whiteLoadingBG.style.visibility = 'hidden';
+
+  logotypeOnly.classList.add('logotype_only_smaller')
+
 });
 
 function showHiddenNav() {
@@ -55,16 +64,32 @@ const localizacaoIMG = document.querySelector('#localizacao img')
 let tratamentosSectionHeight = document.querySelector('#tratamentos').scrollHeight
 let consultorioSectionHeight = document.querySelector('#consultorio').scrollHeight
 
-document.body.onscroll = function() {
+
+// MOBILE
+if (window.matchMedia("(max-width: 100vh)").matches) {
+  document.body.onscroll = function() {
+      for(i = 0; i < fixedIMG.length; ++i) {
+        fixedIMG[i].style.transform = "translateY(" + window.pageYOffset / 3 + "px)"
+      }
+  }
+
+  
+  consultorioIMG.style.bottom = tratamentosSectionHeight / 2 + 'px';
+
+  localizacaoIMG.style.bottom = (consultorioSectionHeight + tratamentosSectionHeight) / 2 + 'px';
+
+  // DESKTOP
+} else {
+  document.body.onscroll = function() {
     for(i = 0; i < fixedIMG.length; ++i) {
-      fixedIMG[i].style.transform = "translateY( -" + window.pageYOffset / 4 + "px)"
+      fixedIMG[i].style.transform = "translateY(" + window.pageYOffset / 2 + "px)"
     }
+  }
+  
+  consultorioIMG.style.bottom = tratamentosSectionHeight * 2 + 'px';
+
+  localizacaoIMG.style.bottom = (consultorioSectionHeight + tratamentosSectionHeight) * 2 + 'px';
 }
-
-consultorioIMG.style.bottom = '-' + tratamentosSectionHeight / 4 + 'px';
-
-localizacaoIMG.style.bottom = '-' + (consultorioSectionHeight + tratamentosSectionHeight) / 6 + 'px';
-
 
 
 
