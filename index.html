@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="./manifest.webmanifest">
 </head>
 <body>
@@ -15,10 +16,12 @@
     <header>
         <img class="logotype_only" src="assets/logotype_only.svg" alt="Ben Orale | Odontologia Especializada">
 
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="hamburger_container">
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
 
         <nav>
@@ -27,9 +30,6 @@
             </div>
             <div>
                 <span>O Consultório</span>
-            </div>
-            <div>
-                <span>A Equipe</span>
             </div>
             <div>
                 <span>Localização</span>
@@ -47,8 +47,8 @@
 
     <h1>Somos uma <strong>clínica odontológica</strong> localizada no <strong>centro de São Paulo</strong>.</h1>
 
-    <section class="tratamentos">
-        <div class="fixed_img_div">
+    <section class="main_section">
+        <div class="fixed_img_div" id="tratamentos">
             <img src="assets/smile_bg.jpg" alt="">
     
             <h2>Tratamentos</h2>
@@ -127,14 +127,26 @@
         </article>
     </section>
 
-    <section class="tratamentos">
+    <section class="main_section" id="consultorio">
         <div class="fixed_img_div">
-            <img src="assets/smile_bg.jpg" alt="">
+            <img src="assets/consultorio.jpg" alt="">
     
             <h2>O Consultório</h2>
         </div>
+        
+        <p><b>Lorem ipsum dolor sit amet consectetur adipisicing</b> elit. Voluptates quod quibusdam, dolor sint laudantium, <b>recusandae nam atque excepturi quis reiciendis</b> minima, odit reprehenderit unde! Aliquid doloremque officiis fugiat sed autem.</p>
+        <p><b>Lorem ipsum dolor sit amet consectetur adipisicing</b> elit. Voluptates quod quibusdam, dolor sint laudantium, <b>recusandae nam atque excepturi quis reiciendis</b> minima, odit reprehenderit unde! Aliquid doloremque officiis fugiat sed autem.</p>
     </section>
 
+    <section class="main_section" id="localizacao">
+        <div class="fixed_img_div">
+            <img src="assets/localizacao.jpg" alt="">
+    
+            <h2>Localização</h2>
+        </div>
+        <p><b>Lorem ipsum dolor sit amet consectetur adipisicing</b> elit. Voluptates quod quibusdam, dolor sint laudantium, <b>recusandae nam atque excepturi quis reiciendis</b> minima, odit reprehenderit unde! Aliquid doloremque officiis fugiat sed autem.</p>
+        <p><b>Lorem ipsum dolor sit amet consectetur adipisicing</b> elit. Voluptates quod quibusdam, dolor sint laudantium, <b>recusandae nam atque excepturi quis reiciendis</b> minima, odit reprehenderit unde! Aliquid doloremque officiis fugiat sed autem.</p>
+    </section>
 
     <footer>
         <article class="contact">

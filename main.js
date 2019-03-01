@@ -3,7 +3,7 @@ const whiteLoadingBG = document.querySelector('.white_bg');
 const logoOnly = document.querySelector('.logo_only');
 const logotypeOnly = document.querySelector('.logotype_only');
 
-const hamburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector('.hamburger_container');
 const headerNav = document.querySelector('header nav')
 
 
@@ -30,9 +30,9 @@ function showHiddenNav() {
     headerNav.classList.toggle('nav_show');
 
     setTimeout(() => {
-        document.querySelector('.hamburger div:first-child').classList.toggle('hamburger_first_div_hidden')
-        document.querySelector('.hamburger div:nth-child(2)').classList.toggle('hamburger_second_div_hidden')
-        document.querySelector('.hamburger div:nth-child(3)').classList.toggle('hamburger_third_div_hidden')
+        document.querySelector('.hamburger_container div div:first-child').classList.toggle('hamburger_first_div_hidden')
+        document.querySelector('.hamburger_container div div:nth-child(2)').classList.toggle('hamburger_second_div_hidden')
+        document.querySelector('.hamburger_container div div:nth-child(3)').classList.toggle('hamburger_third_div_hidden')
     }, 100);
 
 }
@@ -40,11 +40,11 @@ function showHiddenNav() {
 hamburger.addEventListener('click', showHiddenNav)
 
 const fixedIMG = document.querySelectorAll('.fixed_img_div img')
-
-for(i = 0; i < fixedIMG.length; ++i) {
-    console.log(fixedIMG[i].getBoundingClientRect().top)
-    fixedIMG[i].style.bottom = (fixedIMG[i].getBoundingClientRect().top - 300) + "px";
-}
+const tratamentosIMG = document.querySelector('#tratamentos img')
+const consultorioDiv = document.querySelector('#consultorio img')
+const consultorioIMG = document.querySelector('#consultorio img')
+const localizacaoDiv = document.querySelector('#localizacao')
+const localizacaoIMG = document.querySelector('#localizacao img')
 
 document.body.onscroll = function() {
     for(i = 0; i < fixedIMG.length; ++i) {
@@ -52,7 +52,11 @@ document.body.onscroll = function() {
     }
 }
 
+tratamentosIMG.style.bottom = 0 + 'px';
 
+consultorioIMG.style.bottom = consultorioIMG.scrollHeight * 3 + 'px';
+
+localizacaoIMG.style.bottom = localizacaoIMG.scrollHeight * 4 +'px';
 
 
 
