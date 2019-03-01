@@ -747,6 +747,7 @@ a {
     }
 
     .fixed_img_div {
+        height: 38vh;
         width: 65%;
         display: inline-block;
         margin-right: 1.8%;
