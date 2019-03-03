@@ -6,6 +6,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color:#6195b5;
     padding-bottom: 20vh;
+    overflow-x: hidden;
 }
 
 .white_bg {
@@ -231,6 +232,7 @@ footer {
 .contact {
     margin-bottom: 4vw;
     display: flex;
+    position: relative;
 }
 
 .contact p {
@@ -246,28 +248,27 @@ footer {
 }
 
 
-.contact p::before {
-    content: '.......................';
+.pontilhado {
+    z-index: 1;
     position: absolute;
-    color: white;
-    font-size: 20vw;
-    z-index: -1;
-    letter-spacing: 3.4vw;
-    transform: translateY(-6vw);
-    -webkit-transform: translateY(-6vw);
-    -moz-transform: translateY(-6vw);
-    -ms-transform: translateY(-6vw);
-    -o-transform: translateY(-6vw);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 3vw;
+    background: url(assets/pontilhado.svg);
 }
 
-.contact a, .contact p, .address {
+.contact a, .contact p, .address, .pontilhado {
     filter: drop-shadow(0 0.7vh 0.6vh #8AC);
+}
+.contact a, .contact p, .address {
+    z-index: 2;
 }
 
 .contact a {
     width: 9vw;
     height: 9vw;
-    margin: 0 0 0 8vw;
+    margin: 0 4.2vw 0 4.2vw;
     position: relative;
     top: 0.5vw;
     z-index: 1;
@@ -295,9 +296,10 @@ footer {
 h1 {
     font-weight: 300;
     text-align: center;
-    font-size: 6vw;
-    padding: 0 10%;
+    font-size: 7vw;
+    padding: 0 5%;
     margin-bottom: calc(110vh - 600px);
+    cursor: default;
 }
 
 h2 {
@@ -307,7 +309,21 @@ h2 {
     position: absolute;
     text-align: center;
     width: 100%;
-    bottom: 14.6%;
+    bottom: 62%;
+}
+
+.fixed_img_div h3 {
+    padding: 0 2vh;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 11%;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 6vw;
+    text-transform: uppercase;
+    letter-spacing: 0.2vw;
+    width: 100%;
 }
 
 strong, b {
@@ -316,11 +332,11 @@ strong, b {
 
 .fixed_img_div {
     width: 100%;
-    height: 50vh;
+    height: 62vh;
     background:#9dc1e1;
     overflow: hidden;
     position: relative;
-    margin-bottom: 3vh;
+    margin-bottom: 5vh;
 }
 
 
@@ -351,6 +367,15 @@ strong, b {
     padding: 2vh 2vh 3vh 2vh;
     box-sizing: border-box;
     border-radius: 1vh 1vh 0 1vh;
+    transition:background 0.3s ease-out;
+    -webkit-transition:background 0.3s ease-out;
+    -moz-transition:background 0.3s ease-out;
+    -ms-transition:background 0.3s ease-out;
+    -o-transition:background 0.3s ease-out;
+}
+
+.main_section article:hover {
+    background:#F5F5F5;
 }
 
 .main_section article:last-child {
@@ -361,6 +386,7 @@ strong, b {
     font-size: 7vw;
     font-weight: 400;
     position: relative;
+    cursor: default;
 }
 
 .main_section article h3::after {
@@ -377,6 +403,7 @@ strong, b {
     margin: 2vh 0;
     font-size: 5vw;
     font-weight: 300;
+    cursor: default;
 }
 
 
@@ -389,9 +416,20 @@ strong, b {
     border-radius: 10vh 10vh 0 10vh;
     position: absolute;
     right: 0;
+    transition:background 0.3s ease, color 0.3s ease;
+    -webkit-transition:background 0.3s ease, color 0.3s ease;
+    -moz-transition:background 0.3s ease, color 0.3s ease;
+    -ms-transition:background 0.3s ease, color 0.3s ease;
+    -o-transition:background 0.3s ease, color 0.3s ease;
+}
+
+.main_section article a:hover {
+    background: #6195b5;
+    color: white;
 }
 
 .main_section iframe {
+    background: #eee;
     display: block;
     width:90%;
     height:100vw;
@@ -404,17 +442,18 @@ strong, b {
     background: linear-gradient(-30deg, #6195b5, #97CBEB);
     padding: 2vh;
     box-sizing: border-box;
+    margin-bottom: 5vw;
 }
 
 .iframe_info h3 {
     color: white;
     font-weight: 300;
-    font-size: 3vh;
+    font-size: 5vw;
     line-height: 4vh;
 }
 
 .iframe_info h3 span {
-    font-size: 3.8vh;
+    font-size: 7vw;
     font-weight: 400;
 }
 
@@ -423,13 +462,45 @@ a {
     text-decoration: none;
 }
 
+.intro_subcontainer {
+    display: none;
+}
 
+.profissionais {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
 
+.profissionais > div {
+    width: 100%;
+    padding: 6vw;
+    background: WHITE;
+    margin: 0 0 7vw 0;
+    box-shadow: 0 1vh 2vh #fafafa;
+}
 
+.profissionais > div p {
+    text-align: center;
+    line-height: 8vw;
+    font-size: 6vw;
+}
 
+.profissionais > div p:last-child {
+    font-size: 5vw;
+    letter-spacing: 0.5vw;
+    color: #8AB;
+    font-weight: 300;
+    margin-top: 6vw;
+}
 
-
-
+.subtitulo {
+    text-align: center;
+    display: block;
+    font-size: 8vw;
+    margin-bottom: 7vw;
+}
 
 
 
@@ -560,8 +631,7 @@ a {
         -o-transform:scale(1.15);
 }
 
-    .contact p::before {
-        content: '........................................................';
+    .contact span {
         position: absolute;
         color: white;
         font-size: 14vh;
@@ -588,13 +658,9 @@ a {
         background-size: 100%;
     }
     
-    .main_section {
-        display: flex;
-        flex-flow: row wrap;
-    }
 
-    .main_section article {
-        min-height: 38vh;
+    .main_section > article {
+        min-height: 30vh;
         max-width: 44vw;
         display: inline-block;
         border-radius: 0;
@@ -609,7 +675,7 @@ a {
         -o-transform: skew(-5deg);
     }
 
-    .main_section article * {
+    .main_section > article * {
         transform: skew(5deg);
         -webkit-transform: skew(5deg);
         -moz-transform: skew(5deg);
@@ -618,22 +684,22 @@ a {
 }
 
 
-    .main_section article h3 {
+    .main_section > article h3 {
         font-size: 5vh;
         padding-left: 3vh;
     }
 
-    .main_section article p {
+    .main_section > article p {
         font-size: 3.3vh;
         padding-left: 2vh;
     }
 
-    .main_section article a {
+    .main_section > article a {
         font-size: 2.5vh;
         bottom: -2vh;
     }
 
-    .main_section article h3::after {
+    .main_section > article h3::after {
         height: 0.6vh;
     }
 
@@ -645,20 +711,60 @@ a {
         font-weight: 100;
         font-size: 13vh;
         opacity: 0.9;
-        bottom: 9%;
+    }
+
+    .fixed_img_div h3 {
+        font-size: 3vh;
+        bottom: 23%;
     }
 
     #tratamentos {
         padding: 0 3vw;
+        display: flex;
+        flex-flow: row wrap;
     }
     .main_section iframe {
-        height:50vh;
+        height:62vh;
     }
 
     .hamburger_container > div {
         height: 40%;
         left: 20%;
-}
+    }
+    
+    .pontilhado {
+        height: 2vh;
+    }
+
+    .iframe_info h3 {
+        font-size: 3vh;
+    }
+    
+    .iframe_info h3 span {
+        font-size: 4vh;
+    }
+
+    .intro_subcontainer {
+        position: absolute;
+        right: -8%;
+        width: 62%;
+    }
+
+    .intro_subcontainer div {
+        position: relative;
+        width: 100%;
+        height: 38vh;
+        margin: 0 auto;
+        transform: skew(-15deg);
+        overflow: hidden;
+        border-radius: 2vh;
+        box-shadow: 0 1vh 2vh #BCE;
+    }
+    
+    .intro_subcontainer div img {
+        width: 120%;
+        transform: skew(15deg) translateX(-5%);
+    }
 }
 
 
@@ -682,6 +788,7 @@ a {
         width: 90%;
         text-align: right;
         font-size: 17vh;
+        bottom: 8vh;
     }
 
     .hamburger_container {
@@ -747,7 +854,7 @@ a {
     }
 
     .fixed_img_div {
-        height: 38vh;
+        height: 30vh;
         width: 65%;
         display: inline-block;
         margin-right: 1.8%;
@@ -759,21 +866,53 @@ a {
         bottom: 65vw;
     }
 
-    .main_section article {
+    .main_section > article {
         max-width: 28vw;
     }
-    .main_section article:last-child {
+    .main_section > article:last-child {
         max-width: 64%;
     }
 
     .main_section iframe {
-        width: 62%;
-        margin: 0vh 0 0 0;
+        width: 100%;
         display: inline-block;
     }
 
     .iframe_info {
-        width: 38%;
+        width: 41%;
         margin: 0;
+        right: 0;
+        z-index: -1;
+        padding: 3vh 2vh 2vh 5%;
+        background: #fafafa;
+    }
+
+    .iframe_info h3 {
+        color: inherit;
+        font-weight: 400;
+    }
+    .fixed_img_div h3 {
+        text-align: right;
+        font-size: 1.3vw;
+        bottom: 10%;
+        width: 70%;
+        right: 10%;
+    }
+
+    .intro_subcontainer {
+        display: initial;
+        top: 30%;
+        width: 40%;
+        right: 10%;
+    }
+
+    .intro_subcontainer div {
+        height: 50vh;
+        border: 1.5vh solid white;
+        box-sizing: border-box;
+    }
+    
+    .intro_subcontainer div img {
+
     }
 }
