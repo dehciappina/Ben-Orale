@@ -2,6 +2,7 @@
 const whiteLoadingBG = document.querySelector('.white_bg');
 const logoOnly = document.querySelector('.logo_only');
 const logotypeOnly = document.querySelector('.logotype_only');
+const boasVindas = document.querySelector('.boas_vindas');
 
 const hamburger = document.querySelector('.hamburger_container');
 const headerNav = document.querySelector('header nav')
@@ -17,9 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
             whiteLoadingBG.style.visibility = 'hidden';
 
             logoOnly.style.transform = 'translateY(-25vw) scale(2)';
-            logoOnly.style.opacity = 0.2;
 
-            logotypeOnly.classList.add('logotype_only_smaller')
+            logotypeOnly.classList.add('logotype_only_smaller');
+
+            boasVindas.style.opacity = 1;
         }, 1000);
     }, 400);
   } else {
