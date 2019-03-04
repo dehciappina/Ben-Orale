@@ -304,11 +304,11 @@ footer {
     position: relative;
     z-index: 2;
     opacity:0;
-    transition:opacity 1s 1.5s ease;
-    -webkit-transition:opacity 1s 1.5s ease;
-    -moz-transition:opacity 1s 1.5s ease;
-    -ms-transition:opacity 1s 1.5s ease;
-    -o-transition:opacity 1s 1.5s ease;
+    transition:opacity 1s ease;
+    -webkit-transition:opacity 1s ease;
+    -moz-transition:opacity 1s ease;
+    -ms-transition:opacity 1s ease;
+    -o-transition:opacity 1s ease;
 }
 
 h1 {
@@ -768,10 +768,10 @@ a {
 
     .intro_subcontainer {
         position: absolute;
-        right: 10%;
+        right: 6%;
         display: initial;
         width: 40%;
-        bottom: 12%;
+        top: 38%;
     }
 
     .intro_subcontainer > div {

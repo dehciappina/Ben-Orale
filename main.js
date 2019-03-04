@@ -6,6 +6,7 @@ const boasVindas = document.querySelector('.boas_vindas');
 
 const hamburger = document.querySelector('.hamburger_container');
 const headerNav = document.querySelector('header nav')
+const headerNavDiv = document.querySelectorAll('header nav div')
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -21,20 +22,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
             logotypeOnly.classList.add('logotype_only_smaller');
 
-            boasVindas.style.opacity = 1;
-        }, 1000);
-    }, 400);
+            setTimeout(() => {
+              boasVindas.style.opacity = 1;
+            }, 1000);
+        }, 500);
+    }, 300);
   } else {
     whiteLoadingBG.style.opacity = 0;
     whiteLoadingBG.style.visibility = 'hidden';
   
     logotypeOnly.classList.add('logotype_only_smaller')
   }
-  
-
 });
 
-function showHiddenNav() {
+function toggleHiddenNav() {
     headerNav.classList.toggle('nav_show');
 
     hamburger.style.background = '#fafafa';
@@ -48,10 +49,14 @@ function showHiddenNav() {
           hamburger.style.background = '#ffffff';
         }, 300);
     }, 100);
-
 }
 
-hamburger.addEventListener('click', showHiddenNav)
+hamburger.addEventListener('click', toggleHiddenNav)
+
+for(i = 0; i < headerNavDiv.length; ++i) {
+  headerNavDiv[i].addEventListener('click', toggleHiddenNav)
+}
+
 
 const fixedIMG = document.querySelectorAll('.fixed_img_div img')
 const tratamentosIMG = document.querySelector('#tratamentos div img')
@@ -96,19 +101,6 @@ if (window.matchMedia("(max-width: 100vh)").matches || window.matchMedia("(max-w
   document.querySelector('#tratamentos img').style.bottom = 75 + 'vw';
 
 }
-
-let headerHeight = window.innerHeight/100 *12
-
-const tratamentosSection = document.querySelector('#tratamentos')
-const tratamentosAnchor = document.querySelector('#tratamentos_anchor');
-
-tratamentosAnchor.addEventListener('click', function() {
-    window.scroll({
-      top: tratamentosSection.offsetTop - headerHeight, 
-      left: 0, 
-      behavior: 'smooth'
-    });
-})
 
 
 
