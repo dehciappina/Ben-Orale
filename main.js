@@ -8,9 +8,32 @@ const hamburger = document.querySelector('.hamburger_container');
 const headerNav = document.querySelector('header nav')
 const headerNavDiv = document.querySelectorAll('header nav div')
 
+function toggleHiddenNav() {
+  headerNav.classList.toggle('nav_show');
+
+  hamburger.style.background = '#fafafa';
+
+  setTimeout(() => {
+      document.querySelector('.hamburger_container div div:first-child').classList.toggle('hamburger_first_div_hidden')
+      document.querySelector('.hamburger_container div div:nth-child(2)').classList.toggle('hamburger_second_div_hidden')
+      document.querySelector('.hamburger_container div div:nth-child(3)').classList.toggle('hamburger_third_div_hidden')
+
+      setTimeout(() => {
+        hamburger.style.background = '#ffffff';
+      }, 300);
+  }, 100);
+}
+
+hamburger.addEventListener('click', toggleHiddenNav)
+
+if (!window.matchMedia("(min-width: 170vh)").matches) {
+  for(i = 0; i < headerNavDiv.length; ++i) {
+  headerNavDiv[i].addEventListener('click', toggleHiddenNav)
+  }
+}
 
 document.addEventListener("DOMContentLoaded", function() {
-  if (window.matchMedia("(max-width: 100vh)").matches || window.matchMedia("(max-width: 170vh)")) {
+  if (window.matchMedia("(min-width: 100vh)").matches || window.matchMedia("(min-width: 170vh)")) {
     setTimeout(() => {
         logotypeOnly.style.transition = 'transform 1.5s cubic-bezier(0.4, 0, 0.2, 1), width 1.5s cubic-bezier(0.4, 0, 0.2, 1)'
 
@@ -35,33 +58,10 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-function toggleHiddenNav() {
-    headerNav.classList.toggle('nav_show');
-
-    hamburger.style.background = '#fafafa';
-
-    setTimeout(() => {
-        document.querySelector('.hamburger_container div div:first-child').classList.toggle('hamburger_first_div_hidden')
-        document.querySelector('.hamburger_container div div:nth-child(2)').classList.toggle('hamburger_second_div_hidden')
-        document.querySelector('.hamburger_container div div:nth-child(3)').classList.toggle('hamburger_third_div_hidden')
-
-        setTimeout(() => {
-          hamburger.style.background = '#ffffff';
-        }, 300);
-    }, 100);
-}
-
-hamburger.addEventListener('click', toggleHiddenNav)
-
-for(i = 0; i < headerNavDiv.length; ++i) {
-  headerNavDiv[i].addEventListener('click', toggleHiddenNav)
-}
-
 
 const fixedIMG = document.querySelectorAll('.fixed_img_div img')
 const tratamentosIMG = document.querySelector('#tratamentos div img')
 const consultorioSection = document.querySelector('#consultorio')
-const consultorioDiv = document.querySelector('#consultorio img')
 const consultorioIMG = document.querySelector('#consultorio img')
 const localizacaoDiv = document.querySelector('#localizacao')
 const localizacaoIMG = document.querySelector('#localizacao img')
@@ -74,31 +74,30 @@ let consultorioSectionHeight = document.querySelector('#consultorio').scrollHeig
 
 
 // DESKTOP
-if (window.matchMedia("(max-width: 100vh)").matches || window.matchMedia("(max-width: 170vh)").matches) {
+if (window.matchMedia("(min-width: 100vh)").matches || window.matchMedia("(min-width: 170vh)").matches) {
   document.body.onscroll = function() {
       for(i = 0; i < fixedIMG.length; ++i) {
         fixedIMG[i].style.transform = "translateY(" + window.pageYOffset / 3 + "px)"
       }
+    h1.style.transform = "translateY(" + window.pageYOffset / 1.5 + "px)"
   }
 
-  document.querySelector('#tratamentos img').style.bottom = 90 + 'vw';
+  document.querySelector('#tratamentos img').style.bottom = 62 + 'vw';
   
-  consultorioIMG.style.bottom = tratamentosSectionHeight / 2 + 'px';
+  consultorioIMG.style.bottom = tratamentosSectionHeight * 1.5 + 'px';
 
 
   // MOBILE
 } else {
   document.body.onscroll = function() {
     for(i = 0; i < fixedIMG.length; ++i) {
-      fixedIMG[i].style.transform = "translateY(" + window.pageYOffset / 1.3 + "px)"
+      fixedIMG[i].style.transform = "translateY(" + window.pageYOffset / 3 + "px)"
     }
-
-    h1.style.transform = "translateY(" + window.pageYOffset / 1.5 + "px)"
   }
   
-  consultorioIMG.style.bottom = tratamentosSectionHeight * 2 + 'px';
+  consultorioIMG.style.bottom = tratamentosSectionHeight / 2 + 'px';
 
-  document.querySelector('#tratamentos img').style.bottom = 75 + 'vw';
+  document.querySelector('#tratamentos img').style.bottom = 100 + 'vw';
 
 }
 

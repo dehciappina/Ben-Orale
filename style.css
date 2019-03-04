@@ -365,7 +365,8 @@ strong, b {
 }
 
 .intro {
-    height:100vh;
+    height:95vh;
+    position: relative;
 }
 
 .main_section > p {
@@ -521,7 +522,7 @@ a {
 
 #tratamentos_anchor, #consultorio_anchor, #localizacao_anchor, #contato_anchor {
     position: absolute;
-    bottom:12vh;
+    bottom:14.6vh;
 }
 
 
@@ -746,7 +747,7 @@ a {
         flex-flow: row wrap;
     }
     .main_section iframe {
-        height:38vh;
+        height: 50vh;
     }
 
     .hamburger_container > div {
@@ -771,7 +772,8 @@ a {
         right: 6%;
         display: initial;
         width: 40%;
-        top: 38%;
+        min-width: 55vh;
+        top: calc(90vh - 30vw);
     }
 
     .intro_subcontainer > div {
@@ -821,6 +823,9 @@ a {
         max-width: 90vw;
     }
 
+    #tratamentos_anchor, #consultorio_anchor, #localizacao_anchor, #contato_anchor {
+        bottom:12vh;
+    }
 }
 
 
@@ -959,10 +964,23 @@ a {
     .fixed_img_div {
         height: 30vh;
         width: 65%;
-        display: inline-block;
+    }
+
+    #tratamentos .fixed_img_div, #contato .fixed_img_div {
         margin-right: 1.8%;
         margin-left: -3vw;
-        clip-path: polygon(0% 0%, 100% 0%, 97% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 98% 100%, 0% 100%);
+    }
+
+    #consultorio .fixed_img_div {
+        margin-left: 35%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 2% 100%);
+    }
+
+    #consultorio .fixed_img_div h2, #consultorio .fixed_img_div h3 {
+        text-align: left;
+        margin-left: 10%;
+        right: unset;
     }
 
     .fixed_img_div img:first-child {
@@ -977,12 +995,12 @@ a {
     }
 
     .main_section iframe {
-        width: 100%;
+        width: 50%;
         display: inline-block;
     }
 
     .iframe_info {
-        width: 41%;
+        width: 50%;
         margin: 0;
         right: 0;
         z-index: -1;
@@ -993,6 +1011,9 @@ a {
     .iframe_info h3 {
         color: inherit;
         font-weight: 400;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
     }
     .fixed_img_div h3 {
         text-align: right;
@@ -1026,5 +1047,13 @@ a {
     .logotype_only_smaller {
         width: 50vh;
         margin: 0 0 0 21vh;
+    }
+
+    .intro {
+        height:100vh;
+    }
+
+    .desktop_hor_flex {
+        display:flex;
     }
 }
