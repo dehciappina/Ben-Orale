@@ -1,5 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body, p, h1, h2, h3, h4, h5, h6 {
     margin:0;
+}
+
+p, h1, h2, h3, h4, h5, h6, span {
+    cursor: default;
 }
 
 body {
@@ -93,6 +101,7 @@ header {
     right: 0;
     bottom: 0;
     width: 25%;
+    max-width: 20vh;
     transition:background 0.3s ease;
     -webkit-transition:background 0.3s ease;
     -moz-transition:background 0.3s ease;
@@ -198,13 +207,14 @@ header nav div:nth-child(even) {
     background: #fafafa;
 }
 
-header nav div span {
+header nav div a {
     text-align: center;
     display: block;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     font-size: 5vw;
+    user-select: none;
 }
 
 footer {
@@ -307,7 +317,6 @@ h1 {
     font-size: 7vw;
     padding: 0 5%;
     margin-bottom: calc(110vh - 600px);
-    cursor: default;
 }
 
 h2 {
@@ -370,7 +379,7 @@ strong, b {
     position: relative;
     width: 90%;
     display: block;
-    margin: 0 auto 5vh auto;
+    margin: 5vh auto 0 auto;
     background: #FAFAFA;
     padding: 2vh 2vh 3vh 2vh;
     box-sizing: border-box;
@@ -386,15 +395,11 @@ strong, b {
     background:#F5F5F5;
 }
 
-.main_section article:last-child {
-    margin-bottom: 10vh;
-}
 
 .main_section article h3 {
     font-size: 7vw;
     font-weight: 400;
     position: relative;
-    cursor: default;
 }
 
 .main_section article h3::after {
@@ -411,7 +416,6 @@ strong, b {
     margin: 2vh 0;
     font-size: 5vw;
     font-weight: 300;
-    cursor: default;
 }
 
 
@@ -510,6 +514,16 @@ a {
     margin-bottom: 7vw;
 }
 
+.main_section {
+    position: relative;
+    padding-bottom: 10vh;
+}
+
+#tratamentos_anchor, #consultorio_anchor, #localizacao_anchor, #contato_anchor {
+    position: absolute;
+    bottom:12vh;
+}
+
 
 
 
@@ -569,14 +583,14 @@ a {
     }
 
     .logotype_only_smaller {
-        width: 50vh;
-        margin: 0 0 0 21vh;
+        width: 38%;
+        margin: 0 auto;
         transition: none !important;
         -webkit-transition: none !important;
         -moz-transition: none !important;
         -ms-transition: none !important;
         -o-transition: none !important;
-}
+    }
 
     header {
         height: 12vh;
@@ -612,7 +626,7 @@ a {
         -o-transition:transform 0.7s ease-in-out, background 0.1s ease-in-out;
 }
 
-    header nav div span {
+    header nav div a {
         font-size: 3vh;
     }
 
@@ -719,6 +733,7 @@ a {
         font-weight: 100;
         font-size: 13vh;
         opacity: 0.9;
+        bottom: 38%;
     }
 
     .fixed_img_div h3 {
@@ -727,12 +742,11 @@ a {
     }
 
     #tratamentos {
-        padding: 0 3vw;
         display: flex;
         flex-flow: row wrap;
     }
     .main_section iframe {
-        height:62vh;
+        height:38vh;
     }
 
     .hamburger_container > div {
@@ -754,11 +768,13 @@ a {
 
     .intro_subcontainer {
         position: absolute;
-        right: -8%;
-        width: 62%;
+        right: 10%;
+        display: initial;
+        width: 40%;
+        bottom: 12%;
     }
 
-    .intro_subcontainer div {
+    .intro_subcontainer > div {
         position: relative;
         width: 100%;
         height: 38vh;
@@ -766,10 +782,11 @@ a {
         transform: skew(-15deg);
         overflow: hidden;
         border-radius: 2vh;
-        box-shadow: 0 1vh 2vh #BCE;
+        border: 1.5vh solid white;
+        box-sizing: border-box;
     }
     
-    .intro_subcontainer div img {
+    .intro_subcontainer > div img {
         width: 120%;
         transform: skew(15deg) translateX(-5%);
     }
@@ -799,6 +816,11 @@ a {
         letter-spacing: 0.5vh;
         margin-top: 1vh;
     }
+
+    #big_last_article {
+        max-width: 90vw;
+    }
+
 }
 
 
@@ -848,7 +870,7 @@ a {
     h2 {
         width: 90%;
         text-align: right;
-        font-size: 17vh;
+        font-size: calc(7vh + 4vw);
         bottom: 8vh;
     }
 
@@ -870,9 +892,27 @@ a {
         -o-transform: none;
     }
 
+    header nav div:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        height: 62%;
+        top: 19%;
+        right: 0;
+        width: 2px;
+        background: #FAFAFA;
+    }
+
     header nav div {
         width: 25%;
         height: 100%;
+    }
+
+    header nav div:nth-child(even) {
+        background: white;
+    }
+
+    header nav div:hover {
+        background: #FAFAFA;
     }
 
     header nav div:nth-child(1) {
@@ -885,8 +925,10 @@ a {
         transition-delay: 0s;
     }
 
-    header nav div span {
+    header nav div a {
         font-size: 2.8vh;
+        height: 100%;
+        line-height: 12vh;
     }
     .address {
         box-shadow: none;
@@ -930,7 +972,7 @@ a {
     .main_section > article {
         max-width: 28vw;
     }
-    .main_section > article:last-child {
+    #big_last_article {
         max-width: 64%;
     }
 
@@ -954,28 +996,35 @@ a {
     }
     .fixed_img_div h3 {
         text-align: right;
-        font-size: 1.3vw;
-        bottom: 10%;
+        font-size: calc(1vh + 1vw);
+        letter-spacing: 0.2vh;
+        bottom: 2vw;
         width: 70%;
         right: 10%;
     }
 
     .intro_subcontainer {
-        display: initial;
         top: 30%;
         width: 40%;
         right: 10%;
     }
 
-    .intro_subcontainer div {
+    .intro_subcontainer > div {
         height: 50vh;
-        border: 1.5vh solid white;
-        box-sizing: border-box;
     }
     
 
     .profissionais > div p {
         font-size: 3.5vh;
         line-height: 4vh;
+    }
+
+    #tratamentos {
+        padding: 0 3vw 10vh 3vw;
+    }
+
+    .logotype_only_smaller {
+        width: 50vh;
+        margin: 0 0 0 21vh;
     }
 }
