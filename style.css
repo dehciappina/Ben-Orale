@@ -502,9 +502,18 @@ a {
     text-align: center;
     display: block;
     font-size: 8vw;
-    margin-bottom: 7vw;
+    font-weight: 400;
 }
 
+.subtitulo_p {
+    text-align: center;
+    margin: 3vw auto 5vw auto;
+}
+
+.subtitulo_p span {
+    margin: 0 auto 2vw auto;
+    display: block;
+}
 .main_section {
     position: relative;
     padding-bottom: 10vh;
@@ -821,7 +830,7 @@ a {
 
     .subtitulo {
         font-size: 7vh;
-        margin-bottom: 5vh;
+        margin-bottom: 3vh;
     }
 
     .profissionais {
@@ -913,6 +922,12 @@ a {
     .dif_h3 {
         line-height: 5vh;
         margin-bottom: 3vh;
+    }
+
+    
+    .subtitulo_p span {
+        margin: 0 4vh;
+        display: initial;
     }
 }
 
@@ -1085,7 +1100,7 @@ a {
     .main_section iframe {
         width: 62%;
         display: inline-block;
-        box-shadow: -2vh 2vh 2vh #DFDFDF;
+        box-shadow: -3vh 2vh 3vh #E0E0E0;
     }
 
     .iframe_info {
