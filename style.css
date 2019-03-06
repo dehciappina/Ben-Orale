@@ -416,9 +416,8 @@ strong, b {
 .main_section article a {
     text-align: right;
     font-size: 4.5vw;
-    background: #FFF;
+    background: #F5FAFF;
     padding: 0.8vh 2vh;
-    border: 0.6vh solid #FAFAFA;
     border-radius: 10vh 10vh 0 10vh;
     position: absolute;
     right: 0;
@@ -777,13 +776,47 @@ a {
         border-radius: 2vh;
         border: 1.5vh solid white;
         box-sizing: border-box;
+        background: white;
     }
     
     .intro_subcontainer > div img {
         position: absolute;
         top: 0;
+        height: 100%;
         width: 120%;
-        transform: skew(15deg) translateX(-5%);
+        object-fit: cover;
+        transform: skew(15deg) translateX(-10%);
+        animation:img_fade 5s ease infinite alternate;
+        -webkit-animation:img_fade 5s ease infinite alternate;
+        will-change: opacity;
+}
+
+    .intro_subcontainer > div img:nth-child(1) {
+        animation-delay: 5s;
+}
+    .intro_subcontainer > div img:nth-child(2) {
+        animation-delay:2.5s;
+}
+    .intro_subcontainer > div img:nth-child(3) {
+        animation-delay:0s;
+}
+
+    @keyframes img_fade {
+        0% {
+            opacity:1;
+        }
+
+        25% {
+            opacity:1;
+        }
+
+        75% {
+            opacity:0;
+        }
+
+        100% {
+            opacity:0;
+        }
     }
 
     .subtitulo {
@@ -876,6 +909,11 @@ a {
         -ms-transform: translateY(0vh);
         -o-transform: translateY(0vh);
     }
+
+    .dif_h3 {
+        line-height: 5vh;
+        margin-bottom: 3vh;
+    }
 }
 
 
@@ -967,7 +1005,7 @@ a {
     }
 
     header nav div:hover {
-        background: #FAFAFA;
+        background: ghostwhite;
     }
 
     header nav div:nth-child(1) {
@@ -1047,6 +1085,7 @@ a {
     .main_section iframe {
         width: 62%;
         display: inline-block;
+        box-shadow: -2vh 2vh 2vh #DFDFDF;
     }
 
     .iframe_info {
