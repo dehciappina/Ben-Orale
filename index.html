@@ -213,6 +213,14 @@
                 <h2>Fale Conosco</h2>
                 <!-- <h3>Fale conosco através do formulário abaixo ou ligando para os seguintes números:</h3> -->
             </div>
+
+            <form action="/enviar.php" method="POST">
+                <input type="text" name="nome">
+                <input type="email" name="email">
+                <input type="tel" name="tel">
+                <textarea name="mensagem"></textarea>
+                <input type="submit" value="Submit">
+            </form>
     </section>
 
     <footer>
