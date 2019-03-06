@@ -77,14 +77,14 @@ let consultorioSectionHeight = document.querySelector('#consultorio').scrollHeig
 if (window.matchMedia("(min-width: 100vh)").matches || window.matchMedia("(min-width: 170vh)").matches) {
   document.body.onscroll = function() {
       for(i = 0; i < fixedIMG.length; ++i) {
-        fixedIMG[i].style.transform = "translateY(" + window.pageYOffset / 3 + "px)"
+        fixedIMG[i].style.transform = "translateY(" + window.pageYOffset / 2 + "px)"
       }
-    h1.style.transform = "translateY(" + window.pageYOffset / 1.5 + "px)"
+    h1.style.transform = "translateY(" + window.pageYOffset / 2.2 + "px)"
   }
 
   document.querySelector('#tratamentos img').style.bottom = 62 + 'vw';
   
-  consultorioIMG.style.bottom = tratamentosSectionHeight * 1.5 + 'px';
+  consultorioIMG.style.bottom = tratamentosSectionHeight * 1.2 + 'px';
 
 
   // MOBILE
