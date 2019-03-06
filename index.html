@@ -215,14 +215,27 @@
                 <span>(11) 9 7080-5819</span>
             </p>
 
-            <form action="enviar.php" method="POST">
-                <input type="text" name="nome">
-                <input type="email" name="email">
-                <input type="tel" name="tel">
-                <textarea name="mensagem"></textarea>
-                <button type="submit">Submit</button>
+            <form method="POST">
+                <label for="name">Nome</label>
+                <input type="text" name="nome" id="name">
+                
+                <label for="mail">E-mail</label>
+                <input type="email" name="email" id="mail">
+                
+                <label for="phone">Telefone</label>
+                <input type="tel" name="tel" id="phone">
+                
+                <label for="msg">Mensagem</label>
+                <textarea name="mensagem" id="msg"></textarea>
+                <input type="submit" value="Enviar" class="enviar">
             </form>
+
+            <span class="form_span">Por segurança, utilizamos o <b>FormSpree</b> para o recebimento de e-mails. Ao clicar, você passará por uma <b>verificação de reCAPTCHA</b> e poderá retornar com um clique.</span>
     </section>
+
+    <div class="bottom_info">
+        
+    </div>
 
     <footer>
         <article class="contact">
