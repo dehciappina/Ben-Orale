@@ -1010,8 +1010,8 @@ form label {
     form input, form textarea {
         width: 62%;
         max-width: 62%;
-        min-height: 7vh;
-        font-size: 3vh;
+        min-height: 8vw;
+        font-size: 4vw;
         padding: 1vh 2vh;
         margin: 0 auto 2vh auto;
     }
@@ -1035,6 +1035,12 @@ form label {
     .enviar:hover {
         background: #6195b5;
         border-bottom: 1vh solid #006B94;
+    }
+
+    form label {
+        padding: 0 0 0 19vw;
+        margin: 2vh 0 1vh 0;
+        font-size: 2.5vw;
     }
 }
 
@@ -1266,5 +1272,10 @@ form label {
 
     .desktop_hor_flex {
         display:flex;
+    }
+
+    form label {
+        /* padding: 0 0 0 19vw; */
+        font-size: 1.5vw;
     }
 }
