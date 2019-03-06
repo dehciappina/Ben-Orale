@@ -215,6 +215,8 @@ header nav div a {
     transform: translateY(-50%);
     font-size: 5vw;
     user-select: none;
+    height: 100%;
+    line-height: 7vh;
 }
 
 footer {
