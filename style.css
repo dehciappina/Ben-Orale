@@ -226,7 +226,7 @@ footer {
 
 .address {
     background: white;
-    box-shadow: 0 0 10vh 6vh #9dc1e1;
+    box-shadow: 0 0 10vw #9dc1e1;
 }
 
 .address p {
@@ -327,10 +327,10 @@ h2 {
     position: absolute;
     text-align: center;
     width: 100%;
-    bottom: 62%;
+    bottom: calc(25vh - 10vw);
 }
 
-.fixed_img_div h3 {
+.fixed_img_div h3, .fixed_img_div a {
     padding: 0 2vh;
     box-sizing: border-box;
     position: absolute;
@@ -355,6 +355,7 @@ strong, b {
     overflow: hidden;
     position: relative;
     margin-bottom: 5vh;
+    margin-top: 5vh;
 }
 
 
@@ -366,23 +367,42 @@ strong, b {
 }
 
 .intro {
-    height:95vh;
+    height:83vh;
     position: relative;
 }
 
-.main_section > p {
-    width: 90%;
-    margin: 0 auto 5vh auto;
+.main_section > p, .main_section ul li p, .main_section > a, .consultorio_div p {
     font-size: 5vw;
+    font-weight: 300;
+    line-height: 7vw;
+}
+
+.main_section ul {
+    margin: 0 auto 8vw auto;
+    width: 85%;
+}
+
+.main_section > p, .main_section > a, .consultorio_div p {
+    margin: 0 auto 5vw auto;
+    width: 90%;
+}
+.main_section ul li {
+    margin: 0 auto;
+    font-size: 5vw;
+    font-weight: 300;
+}
+
+.main_section > p b, .main_section > p strong {
+    font-weight: 400;
 }
 
 .main_section article {
     position: relative;
     width: 90%;
     display: block;
-    margin: 5vh auto 0 auto;
-    background: linear-gradient(160deg, #F5FAFF, #FFFFFF);
-    padding: 2vh 2vh 3vh 2vh;
+    margin: 0 auto 4vh auto;
+    background: linear-gradient(160deg, ghostwhite, #FFF);
+    padding: 3vh 2vh;
     box-sizing: border-box;
     border-radius: 1vh 1vh 0 1vh;
 }
@@ -390,18 +410,20 @@ strong, b {
 
 .main_section article h3 {
     font-size: 7vw;
-    font-weight: 400;
+    font-weight: 300;
     position: relative;
+    color: #4D81A1;
 }
 
 .main_section article h3::after {
     content: '';
     position: absolute;
-    background: white;
+    background: linear-gradient(90deg, #CBD8FF, ghostwhite);
     width: 100%;
-    height: 0.8vw;
+    height: 0.6vw;
     left: 0;
     bottom: -20%;
+    filter: blur(0.2vh);
 }
 
 .main_section article p {
@@ -414,9 +436,9 @@ strong, b {
 .main_section article a {
     text-align: right;
     font-size: 4.5vw;
-    background: #F5FAFF;
+    background: ghostwhite;
+    border-radius: 0.6vh;
     padding: 0.8vh 2vh;
-    border-radius: 10vh 10vh 0 10vh;
     position: absolute;
     right: 0;
     transition:background 0.3s ease, color 0.3s ease;
@@ -429,6 +451,8 @@ strong, b {
 .main_section article a:hover {
     background: #6195b5;
     color: white;
+    transform: translateX(6%);
+    box-shadow: none;
 }
 
 .main_section iframe {
@@ -447,10 +471,11 @@ strong, b {
     margin-bottom: 5vw;
 }
 
-.iframe_info h3 {
+.iframe_info h3, .contact_info h3 {
     font-weight: 300;
     font-size: 5vw;
-    line-height: 4vh;
+    line-height: 7vw;
+    text-align: center;
 }
 
 .iframe_info h3 span {
@@ -468,18 +493,17 @@ a {
 }
 
 .profissionais {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: row wrap;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .profissionais > div {
-    width: 100%;
+    width: 80%;
     padding: 6vw;
-    background: WHITE;
-    margin: 0 0 7vw 0;
-    box-shadow: 0 1vh 2vh #fafafa;
+    background: linear-gradient(160deg, ghostwhite, #FFF);
+    margin: 0 auto 7vw auto;
+    box-sizing: border-box;
 }
 
 .profissionais > div p {
@@ -501,13 +525,14 @@ a {
     display: block;
     font-size: 9vw;
     font-weight: 400;
-    margin: 4vh auto 3vh auto;
+    margin: 0 auto 3vh auto;
     width: max-content;
 }
 
 .subtitulo_p {
     text-align: center;
     margin: 3vw auto 5vw auto;
+    font-size: calc(1.5vh + 2vw);
 }
 
 .subtitulo_p span {
@@ -518,7 +543,7 @@ a {
     position: relative;
 }
 
-#tratamentos_anchor, #consultorio_anchor, #localizacao_anchor, #contato_anchor {
+#tratamentos_a, #consultorio_a, #localizacao_a, #contato_a {
     position: absolute;
     bottom:14.6vh;
 }
@@ -527,10 +552,10 @@ a {
 form input, form textarea {
     display: block;
     margin: 0 auto;
-    width: 80%;
-    max-width: 80%;
+    width: 100%;
+    max-width: 100%;
     border: none;
-    background: #fafafa;
+    background: ghostwhite;
     color: #008085;
     min-height: 10vw;
     padding: 2vw;
@@ -551,7 +576,6 @@ form textarea {
 }
 
 form label {
-    padding: 0 0 0 10vw;
     margin: 3vw 0 1vw 0;
     display: block;
     font-size: 5vw;
@@ -589,22 +613,62 @@ form label {
     padding: 0 10vw;
     font-weight: 300;
     line-height: 6vw;
-    margin: 5vh 0;
+    margin: 5vh 0 20vh 0;
 }
 .form_span b {
     text-decoration: underline;
     font-weight: 300;
 }
 
-#big_last_article {
-    margin-bottom: 10vw;
-}
-
 .bottom_info {
     width:100%;
     height:38vh;
-    background:#006B94;
+    background:linear-gradient(#6DA0C9, #006B94);
 }
+
+#big_last_article {
+    margin-bottom: 15vw;
+}
+
+.main_section > a {
+    background: #EEF0FF;
+    padding: 1vh 3vh;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 400;
+
+    transition: background 0.3s ease;
+
+    text-align: center;
+}
+
+.consultorio_flex {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+form {
+    margin-bottom: 35vw;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -634,6 +698,18 @@ form label {
 /* TABLET */
 
 @media screen and (min-width: 100vh) {
+
+    .main_section > a {
+        text-align: left;
+    }
+
+    .main_section > a:hover {
+        background:#DCEDFF;
+    }
+        
+    #big_last_article {
+        margin-bottom: 0;
+    }
 
     h1 {
         font-size: calc(1vw + 5vh);
@@ -758,51 +834,53 @@ form label {
     
 
     .main_section > article {
-        min-height: 30vh;
-        max-width: 44vw;
         display: inline-block;
+        width: 62%;
         border-radius: 0;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         -ms-border-radius: 0;
         -o-border-radius: 0;
-        transform: skew(-5deg);
-        -webkit-transform: skew(-5deg);
-        -moz-transform: skew(-5deg);
-        -ms-transform: skew(-5deg);
-        -o-transform: skew(-5deg);
     }
 
-    .main_section > article * {
-        transform: skew(5deg);
-        -webkit-transform: skew(5deg);
-        -moz-transform: skew(5deg);
-        -ms-transform: skew(5deg);
-        -o-transform: skew(5deg);
-}
-
-
     .main_section > article h3 {
-        font-size: 5vh;
+        font-size: calc(12px + 2vh);
         padding-left: 3vh;
+        padding-right: 10%;
+        display: inline;
     }
 
     .main_section > article p {
-        font-size: 3.3vh;
+        font-size: calc(8px + 1.5vh);
         padding-left: 2vh;
+        margin: 4vh auto 1vh auto;
+        width: 95%;
+        line-height: calc(5px + 3vh);
     }
 
     .main_section > article a {
         font-size: 2.5vh;
-        bottom: -2vh;
+        top: 3vh;
+        right: -3vh;
+        box-shadow: inset 0 0vh 1vh #EEF;
+        transition: 0.2s ease;
     }
 
     .main_section > article h3::after {
-        height: 0.6vh;
+        height: 0.5vh;
     }
 
-    .main_section > p {
-        font-size: 3.3vh;
+    .main_section > p, .main_section ul li p, .main_section > a, .consultorio_div p {
+        font-size: calc(8px + 1.5vh);
+        line-height: calc(13px + 1.5vh);
+    }
+
+    .main_section > p, .main_section ul, .main_section > a, .consultorio_div p {
+        margin: 3vh auto 0 auto;
+    }
+
+    .main_section ul li p {
+        margin: 0 auto 1vh auto;
     }
     
     h2 {
@@ -820,6 +898,7 @@ form label {
     #tratamentos {
         display: flex;
         flex-flow: row wrap;
+        padding: 0 3vw 15vh 3vw;
     }
     .main_section iframe {
         height: 50vh;
@@ -835,11 +914,12 @@ form label {
     }
 
     .iframe_info h3 {
-        font-size: 3vh;
+        font-size: calc(8px + 1.5vh);
     }
     
     .iframe_info h3 span {
-        font-size: 4vh;
+        font-size: unset;
+        text-decoration: underline;
     }
 
     .intro_subcontainer {
@@ -905,36 +985,35 @@ form label {
     }
 
     .subtitulo {
-        font-size: 7vh;
-        margin-bottom: 3vh;
+        font-size: 5vh;
+        margin-top: 5vh;
+        margin-bottom: 0;
+        width: 100%;
     }
 
-    .profissionais {
-        flex-flow: row nowrap;
+    .localizacao_flex {
+        background: ghostwhite;
+        padding: 6vh 0;
     }
 
     .profissionais > div {
         padding: calc(1vw + 1vh);
-        margin: 0 auto 7vh auto;
-        width: 25%;
+        margin: 3vh auto 0 auto;
+        width: 62%;
     }
 
     .profissionais > div p {
-        font-size: 3.5vh;
-        line-height: 4.5vh;
+        font-size: 3vh;
+        line-height: 3vh;
     }
 
     .profissionais > div p:last-child {
-        font-size: 3vh;
+        font-size: 2vh;
         letter-spacing: 0.5vh;
         margin-top: 1vh;
     }
 
-    #big_last_article {
-        max-width: 90vw;
-    }
-
-    #tratamentos_anchor, #consultorio_anchor, #localizacao_anchor, #contato_anchor {
+    #tratamentos_a, #consultorio_a, #localizacao_a, #contato_a {
         bottom:12vh;
     }
 
@@ -995,11 +1074,10 @@ form label {
         -o-transform: translateY(0vh);
     }
 
-    .dif_h3 {
-        line-height: 5vh;
-        margin-bottom: 3vh;
+    .subtitulo_p {
+        margin: 1vh 0 0 0;
+        font-size: calc(8px + 1.5vh);
     }
-
     
     .subtitulo_p span {
         margin: 0 2vw;
@@ -1008,28 +1086,46 @@ form label {
 
     
     form input, form textarea {
-        width: 62%;
-        max-width: 62%;
-        min-height: 8vw;
-        font-size: 4vw;
+        min-height: 2vh;
+        font-size: 2.5vh;
         padding: 1vh 2vh;
-        margin: 0 auto 2vh auto;
+        margin: 0;
+        transition: background 0.3s ease-out;
+        -webkit-transition: background 0.3s ease-out;
+        -moz-transition: background 0.3s ease-out;
+        -ms-transition: background 0.3s ease-out;
+        -o-transition: background 0.3s ease-out;
     }
 
     form textarea {
-        height: 30vh;
+        height: 18vh;
         max-height: 50vh;
+        max-width: 38vw;
+        min-width: 100%;
+        margin: 0 !important;
+    }
+
+    form label {
+        margin: 2vh 0 1vh 0;
+        font-weight: 400;
+        font-size: 2.5vw;
     }
 
     .enviar {
-        font-size: 4vh;
+        margin-top: 4vh;
+        font-size: 3vh;
         border-bottom: 1vh solid #6195b5;
+    }
+
+    form input:not(:last-child), form textarea {
+        border-top: 0.6vh solid #EEF;
     }
     
     .form_span {
         font-size: 3vh;
         line-height: 4vh;
         padding: 0 18vw;
+        margin: 5vh 0 15vh 0;
     }
 
     .enviar:hover {
@@ -1037,10 +1133,25 @@ form label {
         border-bottom: 1vh solid #006B94;
     }
 
-    form label {
-        padding: 0 0 0 19vw;
-        margin: 2vh 0 1vh 0;
-        font-size: 2.5vw;
+    
+    .main_section ul li {
+        font-size: 3vh;
+    }
+    
+    .intro {
+        height:100vh;
+    }
+    .iframe_info h3, .contact_info h3 {
+        font-size: 3.5vh;
+        line-height: 5vh;
+    }
+    
+    form {
+        margin-bottom: 20vh;
+    }
+
+    .iframe_info {
+        margin-bottom: 0;
     }
 }
 
@@ -1081,7 +1192,7 @@ form label {
 
 
 
-@media screen and (min-width: 170vh) {
+@media screen and (min-width: 160vh) {
 
 
     h1 {
@@ -1091,8 +1202,8 @@ form label {
     h2 {
         width: 90%;
         text-align: right;
-        font-size: calc(7vh + 4vw);
-        bottom: 8vh;
+        font-size: calc(6vh + 3vw);
+        bottom: 7vh;
     }
 
     .hamburger_container {
@@ -1162,7 +1273,7 @@ form label {
     .address p {
         text-align: left;
         padding: 1vh 3vw;
-        font-size: 2.8vh;
+        font-size: 2.5vh;
     }
 
     footer {
@@ -1178,8 +1289,9 @@ form label {
     }
 
     .fixed_img_div {
-        height: 30vh;
-        width: 65%;
+        height: 24vh;
+        width: 62vw;
+        margin-top: 0;
     }
 
     #tratamentos .fixed_img_div, #contato .fixed_img_div {
@@ -1189,7 +1301,6 @@ form label {
     }
 
     #consultorio .fixed_img_div {
-        margin-left: 35%;
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 2% 100%);
     }
 
@@ -1203,38 +1314,52 @@ form label {
         bottom: 65vw;
     }
 
-    .main_section > article {
-        max-width: 28vw;
-    }
-    #big_last_article {
-        max-width: 64%;
+    .iframe_info, .main_section iframe{
+        width: 50%;
     }
 
-    .main_section iframe {
-        width: 62%;
-        display: inline-block;
-        box-shadow: -3vh 2vh 3vh #E0E0E0;
+    form {
+        width: 50%;
+        background: #F2F2FE;
+        padding: 5vh 5vh 12vh 5vh;
+        margin-bottom: 0;
+        box-shadow: -1vh 5vh 5vh #CDE;
     }
 
-    .iframe_info {
-        width: 38%;
+
+    .iframe_info, .contact_info {
         margin: 0;
         right: 0;
-        z-index: -1;
-        padding: 3vh 2vh 2vh 5%;
+        padding: 0 2vh 2vh 10vh;
     }
 
-    .iframe_info h3 {
+    .contact_info {
+        width: 32%;
+        padding-left: 20%;
+        height: 25vh;
+        transform: translateY(100%);
+    }
+
+    .contact_info h4, .contact_info h3 {
+        text-shadow: 0 0.3vh 0.2vh white;
+    }
+    
+    .subtitulo {
+        margin-top: 0;
+    }
+
+    .iframe_info h3, .contact_info h3 {
         color: inherit;
         font-weight: 400;
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 60%;
+        margin-top: 2vh;
+        line-height: calc(13px + 1.5vh);
+        text-align: left;
+        font-size: calc(8px + 1.5vh);
     }
     .fixed_img_div h3 {
         text-align: right;
-        font-size: calc(1vh + 1vw);
+        font-size: calc(0.4vh + 1vw);
         letter-spacing: 0.2vh;
         bottom: 2vw;
         width: 70%;
@@ -1253,12 +1378,8 @@ form label {
     
 
     .profissionais > div p {
-        font-size: 3.5vh;
+        font-size: 3vh;
         line-height: 4vh;
-    }
-
-    #tratamentos {
-        padding: 0 3vw 10vh 3vw;
     }
 
     .logotype_only_smaller {
@@ -1266,19 +1387,97 @@ form label {
         margin: 0 0 0 21vh;
     }
 
-    .intro {
-        height:100vh;
-    }
-
     .desktop_hor_flex {
         display:flex;
     }
 
     form label {
-        /* padding: 0 0 0 19vw; */
-        font-size: 1.5vw;
+        font-size: 3vh;
+    }
+
+    .consultorio_flex {
+        flex-flow: row nowrap;
+    }
+
+    .profissionais_container {
+        width: 38%;
+    }
+
+    .consultorio_div {
+        width: 62%;
+    }
+
+    .margin_bottom1 {
+        margin-bottom: 10vh;
+    }
+
+    .flex_main_div .subtitulo {
+        text-align: left;
+    }
+    
+    form input, form textarea {
+        background: linear-gradient(90deg, white, ghostwhite);
+    }
+
+    .subtitulo_p {
+        text-align: left;
+        width: 62%;
+    }
+
+    #contato {
+        background-image: url("assets/contact_bg.jpg");
+        background-size: 100%;
+        background-attachment: fixed;
+        background-position: bottom left;
+    
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
