@@ -12,6 +12,16 @@
     gtag('config', 'UA-136886220-1');
     </script>
 
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.11/dist/lenis.css">
+
+    <script defer>
+        const lenis = new Lenis({
+        autoRaf: true,
+        duration: 1.5,
+        easing: (x) => 1 - Math.pow(1 - x, 10),
+        });
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,47 +59,46 @@
                 <a href="#consultorio_a">O Consultório</a>
             </div>
             <div>
-                <a href="#contato_a">Contato</a>
+                <a href="#contato">Contato</a>
             </div>
         </nav>
     </header>
 
     <section class="intro" id="inicio_a">
+        <img class="logo_only" src="assets/logo_only.svg" alt="Logomarca - dente entre duas elipses cruzadas">
 
-    <img class="logo_only" src="assets/logo_only.svg" alt="Logomarca - dente entre duas elipses cruzadas">
+        <span class="boas_vindas">
+            Seja Bem Vind@!
+        </span>
 
-    <span class="boas_vindas">
-        Seja Bem Vind@!
-    </span>
+        <h1>Somos uma <strong>clínica odontológica</strong> localizada no <strong>centro de São Paulo</strong>.</h1>
 
-    <h1>Somos uma <strong>clínica odontológica</strong> localizada no <strong>centro de São Paulo</strong>.</h1>
+        <article class="intro_subcontainer">
+            <a href="#contato_a">
+                <span>Agende uma Consulta</span>
+            </a>
+            
+            <a href="#tratamentos_a">
+                <span>Conheça Nossos Serviços</span>
+            </a>
 
-    <article class="intro_subcontainer">
-        <a href="#contato_a">
-            <span>Agende uma Consulta</span>
-        </a>
-        <a href="#tratamentos_a">
-            <span>Conheça Nossos Serviços</span>
-        </a>
+            <div class="img_showcase">
+                <img src="assets/intro_photo.jpg" alt="">
+                <img src="assets/intro_photo2.jpg" alt="">
+                <img src="assets/intro_photo3.jpg" alt="">
+            </div>
+        </article>
 
-        <div>
-            <img src="assets/intro_photo.jpg" alt="">
-            <img src="assets/intro_photo2.jpg" alt="">
-            <img src="assets/intro_photo3.jpg" alt="">
-        </div>
-    </article>
-
-    <div id="tratamentos_a"></div>
-
+        <div id="tratamentos_a"></div>
     </section>
-    <section class="main_section"  id="tratamentos">
-        <div class="fixed_img_div">
-            <img src="assets/smile_bg.jpg" alt="">
-    
+
+    <section class="main_section" id="tratamentos">
+        <div class="sorriso fixed_img_div">    
             <h2>Tratamentos</h2>
             <h3>Realizamos os seguintes procedimentos</h3>
         </div>
 
+        <div class="tratamentos_ctnr">
             <article>
                 <h3>Exames de Rotina</h3>
 
@@ -157,11 +166,12 @@
 
                 <a href="tratamentos/estetica.html">Saiba mais</a>
             </article>
+        </div>
             
         <div id="consultorio_a"></div>
     </section>
 
-    <section class="main_section" id="consultorio">
+    <section class="local_sec" id="consultorio">
         <div class="consultorio_flex margin_bottom1">
             <div class="profissionais_container">
                 <span class="subtitulo">Profissionais</span>
@@ -184,8 +194,6 @@
     
             <div class="consultorio_div">
                 <div class="fixed_img_div">
-                    <img src="assets/consultorio.jpg" alt="">
-            
                     <h2>O Consultório</h2>
                     <h3>Aberto de segunda a sexta-feira, das 9h às 18h</h3>
                 </div>
@@ -205,21 +213,21 @@
 
             
             <div class="iframe_info">
-                
-        <h4 class="subtitulo">Nossa Localização</h4>
-        <p class="subtitulo_p">Alameda Barão de Limeira, 1163, 1º andar, sala 1 - Campos Elíseos - São Paulo, SP</p>
-                <h3>
-                    <span>Estamos próximos aos seguintes lugares:<br/><br/></span>
-                    Estação Marechal Deodoro,
-                    <br/>
-                    Terminal Princesa Isabel,
-                    <br/>
-                    Largo do Paissandú,
-                    <br/>
-                    Memorial da América Latina e
-                    <br/>
-                    Estação Júlio Prestes da CPTM
-                </h3>
+                <div class="content">
+                    <h4 class="subtitulo">Nossa Localização</h4>
+
+                    <p class="subtitulo_p">Alameda Barão de Limeira, 1163, 1º andar, sala 1 - Campos Elíseos - São Paulo, SP</p>
+
+                    <h3>Estamos próximos aos seguintes lugares:</h3>
+
+                    <ul>
+                        <li>Estação Marechal Deodoro</li>
+                        <li>Terminal Princesa Isabel</li>
+                        <li>Largo do Paissandú</li>
+                        <li>Memorial da América Latina</li>
+                        <li>Estação Júlio Prestes da CPTM</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div id="contato_a"></div>
@@ -227,7 +235,7 @@
 
     
 
-    <section class="main_section" id="contato">
+    <section class="contato_sec" id="contato">
 
         <div class="desktop_hor_flex margin_bottom_top1 flex_main_div">
             <div class="contact_info">
@@ -264,7 +272,7 @@
 
     <footer>
         <article class="contact">
-            <p>Contato</p>
+            <p>Fale Conosco</p>
             <div class="pontilhado"></div>
             <a href="tel:1138257643" title="Ligar para (11) 3825-7643">
                 <img src="assets/tel1.svg" alt="ligar para o segundo número de telefone">

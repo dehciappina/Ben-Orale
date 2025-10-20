@@ -22,6 +22,17 @@
     <script src="script.js" defer></script>
     <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="../manifest.webmanifest">
+
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.11/dist/lenis.css">
+
+    <script defer>
+        const lenis = new Lenis({
+        autoRaf: true,
+        duration: 1.5,
+        easing: (x) => 1 - Math.pow(1 - x, 10),
+        });
+    </script>
 </head>
 <body>
         <div class="white_bg"></div>
@@ -49,7 +60,7 @@
                 <a href="../index.html#consultorio_a">O Consultório</a>
             </div>
             <div>
-                <a href="../index.html#contato_a">Contato</a>
+                <a href="../index.html#contato">Contato</a>
             </div>
         </nav>
     </header>

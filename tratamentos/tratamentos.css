@@ -4,6 +4,7 @@
 
 .main_section > p {
     /* text-align: justify; */
+    line-height: 1.6;
 }
 
 .fixed_img_div a {
